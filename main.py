@@ -3,4 +3,4 @@
 print("Content-type: text/html")
 print("")
 
-print("HELLO")
+print("HELLO TOUT LE MONDE")
