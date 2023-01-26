@@ -8,7 +8,7 @@ pipeline {
 		sh 'chmod 755 main.py'
 		sh './main.py'
 sh 'pylint --disable=W1202 --output-format=parseable --reports=no main.py > pylint.log || echo "pylint exited with $?"'
-sh 'cat render/pylint.log'
+sh 'cat pylint.log'
 
 step([
         $class                     : 'WarningsPublisher',
