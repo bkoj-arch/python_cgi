@@ -5,14 +5,14 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing..'
-		chmod 755 main.py
-		./main.py
+		sh 'chmod 755 main.py'
+		sh './main.py'
             }
         }
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
-		sh 'cp main.py /usr/share/nginx/cgi-bin/main.cgi'
+		sh "cp main.py /usr/share/nginx/cgi-bin/main.cgi"
             }
         }
     }
