@@ -12,7 +12,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
-		cp main.py /usr/share/nginx/cgi-bin/main.cgi
+		sh 'cp main.py /usr/share/nginx/cgi-bin/main.cgi'
             }
         }
     }
