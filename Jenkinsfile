@@ -17,7 +17,7 @@ recordIssues enabledForFailure: true, aggregatingResults: true, tool: pyLint(pat
             steps {
                 echo 'Deploying....'
 		sh 'mv main.py main.cgi'
-		sh "sftp -i ~/.ssh/jenkins_rsa -o "StrictHostKeyChecking no" -P 2222 -b sftp_commands jenkins@1.2.3.40:cgi-bin/ "
+		sh "sftp -i ~/.ssh/jenkins_rsa -o 'StrictHostKeyChecking no' -P 2222 -b sftp_commands jenkins@1.2.3.40:cgi-bin/ "
             }
         }
     }
