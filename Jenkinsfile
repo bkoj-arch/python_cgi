@@ -16,7 +16,7 @@ recordIssues enabledForFailure: true, aggregatingResults: true, tool: pyLint(pat
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
-		sh "sftp jenkins@1.2.3.40:~/cgi-bin/ <<EOF\
+		sh "sftp jenkins@1.2.3.40:cgi-bin/ <<EOF\
 			put main.cgi\
 		EOF"
             }
