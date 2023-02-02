@@ -1,5 +1,5 @@
 #!/usr/bin/python
-
+"""Module"""
 print("Content-type: text/html")
 print("")
 
